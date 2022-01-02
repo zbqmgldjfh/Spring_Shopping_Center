@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
@@ -21,5 +22,7 @@ public class OrderRepository {
     }
 
     // TODO 동적 쿼리로 검색조건을 통해 검색하기
-
+//    public List<Order> findAll(OrderSearch orderSearch) {
+//        em.createQuery("select o from Order o join o.member m", Order.class);
+//    }
 }
